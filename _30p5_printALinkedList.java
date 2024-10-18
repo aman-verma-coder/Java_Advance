@@ -33,16 +33,29 @@ public class _30p5_printALinkedList {
         tail = newNode;
     }
 
-    public static void main(String[] args) {
-        _30p5_printALinkedList ll = new _30p5_printALinkedList();
-        ll.addFirst(2);
-        ll.addFirst(1);
-        ll.addLast(3);
-        ll.addLast(4);
+    public void printLL() {
         Node temp = head;
+        if (head == null) {
+            System.out.println("LL is empty");
+            return;
+        }
         while (temp != null) {
-            System.out.print(temp.data + " ");
+            System.out.print(temp.data + "=>");
             temp = temp.next;
         }
+        System.out.println("null");
+    }
+
+    public static void main(String[] args) {
+        _30p5_printALinkedList ll = new _30p5_printALinkedList();
+        ll.printLL();
+        ll.addFirst(2);
+        ll.printLL();
+        ll.addFirst(1);
+        ll.printLL();
+        ll.addLast(3);
+        ll.printLL();
+        ll.addLast(4);
+        ll.printLL();
     }
 }
